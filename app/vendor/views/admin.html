@@ -1,0 +1,15 @@
+<h1>Administration</h1>
+<div class="form-group has-success">
+    <input type="text" class="form-control floating-label" ng-model="new.id" placeholder="Identifiant">
+    <br>
+    <input type="text" class="form-control floating-label" ng-model="new.tocken" placeholder="Tocken">
+    <br>
+    <input type="text" class="form-control floating-label" ng-model="new.name" placeholder="Nom">
+    <button type="submit" class="btn btn-primary" ng-click="add()">Ajouter un nouveau réceptionneur</button>
+    <button type="submit" class="btn btn-danger" ng-click="removeFile()">Supprimer le fichier de sauvegarde</button>
+</div>
+<h2>Réceptionneurs connus</h2>
+<ul>
+    <li ng-repeat="item in items | orderBy:'count':true">{{item.name}} <i class="mdi-action-delete" ng-click="remove(item);"></i></li>
+</ul>
+<a class="btn btn-fab btn-material-grey-200" href="#/"><i class="mdi-action-home"></i></a>

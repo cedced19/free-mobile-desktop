@@ -1,0 +1,16 @@
+{
+  "name": "free-mobile",
+  "main": "index.html",
+  "version": "0.0.0",
+  "single-instance": true,
+  "window": {
+    "title": "Rename date",
+    "icon": "favicon.png",
+    "width": 550,
+    "height": 450,
+    "min_width": 550,
+    "min_height": 450,
+    "toolbar": false
+  },
+  "chromium-args": "--child-clean-exit"
+}

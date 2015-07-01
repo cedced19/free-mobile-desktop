@@ -1,0 +1,27 @@
+<h1>Free Mobile pour Ordinateur</h1>
+<p>
+    Envoyez un message simplement grâce à l'API de Free Mobile.
+</p>
+<h2>Message</h2>
+<textarea class="form-control" ng-model="message"></textarea>
+<h2>Réceptionneurs connus</h2>
+<div class="form-group has-success">
+    <input type="text" class="form-control floating-label" ng-model="search" placeholder="Rechercher">
+</div>
+<ul>
+    <li ng-repeat="item in items | filter:search">{{item.name}} <i green class="mdi-content-reply" ng-click="send(item);"></i></li>
+</ul>
+<a class="btn btn-fab btn-material-grey-200" href="#/admin"><i class="mdi-content-create"></i></a>
+<div class="modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Information</h4>
+            </div>
+            <div class="modal-body">Votre message sera envoyé !</div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+            </div>
+        </div>
+    </div>
+</div>

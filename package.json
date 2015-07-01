@@ -1,0 +1,37 @@
+{
+  "name": "free-mobile-desktop",
+  "version": "0.0.0",
+  "homepage": "https://github.com/cedced19/free-mobile-desktop",
+  "bugs": "https://github.com/cedced19/free-mobile-desktop/issues",
+  "author": {
+    "name": "Cédric",
+    "email": "cedced19@gmail.com",
+    "url": "https://github.com/cedced19"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cedced19/free-mobile-desktop.git"
+  },
+  "devDependencies": {
+    "colors": "1.0.3",
+    "gulp": "^3.8.10",
+    "gulp-clean": "^0.3.1",
+    "gulp-htmlmin": "^1.1.1",
+    "gulp-if": "^1.2.5",
+    "gulp-minify-css": "^1.1.1",
+    "gulp-uglify": "^1.2.0",
+    "gulp-useref": "^1.1.2",
+    "gulp-util": "^3.0.2",
+    "gulp-zip": "^2.0.2",
+    "node-webkit-builder": "^1.0.11"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://cedced19.github.io/license/"
+    }
+  ]
+}
