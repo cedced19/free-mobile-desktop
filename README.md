@@ -1,18 +1,23 @@
 # Free Mobile for Desktop
 
-This is not a official application.
-A __french__ application to send SMS with the Free Mobile API.
+Ceci n'est pas une application officiel.
+Une  application pour envoyer des SMS avec l'API de Free Mobile
 
 ## Installation
 
-1. [Download for Windows](https://raw.githubusercontent.com/cedced19/free-mobile-desktop/master/dist/Windows.zip)
-2. Extract
-3. Execute `free-mobile.exe`
+1. [Télécharger](https://github.com/cedced19/free-mobile-desktop/releases/latest)
+2. Extraire les fichiers
+3. Executer `free-mobile.exe`
 
 ![Demo](demo.png)
 
-## To compile
+## Pour compiler
 
+```
+npm install
+gulp dist-win
+```
+ou
 ```
 npm install
 gulp
