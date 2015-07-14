@@ -13,7 +13,7 @@
     process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 
     return function (item, message) {
-        message.replace(/ /g, '%20').replace(/\n/g, '%0d');
+        message = encodeURI(message);
         https.get('https://smsapi.free-mobile.fr/sendmsg?user=' + item.id + '&pass=' + item.tocken + '&msg=' + message, function (res) {
           res.resume();
         });
