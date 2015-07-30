@@ -1,6 +1,6 @@
 # Free Mobile pour Ordinateur
 
-Ceci n'est pas une application officiel.
+Ceci n'est pas une application officielle.
 
 Une  application pour envoyer des SMS avec l'API de Free Mobile.
 
@@ -10,7 +10,7 @@ Une  application pour envoyer des SMS avec l'API de Free Mobile.
 
 1. [Télécharger](https://github.com/cedced19/free-mobile-desktop/releases/latest)
 2. Extraire les fichiers
-3. Executer `free-mobile.exe`
+3. Exécuter `free-mobile.exe`
 4. [Obtenir les identifiants](http://www.domotique-info.fr/2014/06/nouvelle-api-sms-chez-free/)
 
 ## Pour compiler
