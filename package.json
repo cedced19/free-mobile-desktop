@@ -1,6 +1,6 @@
 {
   "name": "free-mobile-desktop-build",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "homepage": "https://github.com/cedced19/free-mobile-desktop",
   "bugs": "https://github.com/cedced19/free-mobile-desktop/issues",
   "author": {
@@ -41,13 +41,33 @@
   "scripts": {
     "start": "electron .",
     "build": "node ./node_modules/.bin/electron-builder",
-    "build:mac": "node ./node_modules/.bin/electron-builder --mac"
+    "build:mac": "node ./node_modules/.bin/electron-builder --mac",
+    "build:mac-unsigned": "node ./node_modules/.bin/electron-builder --mac --config -c.mac.identity=null",
+    "build:win": "node ./node_modules/.bin/electron-builder --win",
+    "build:linux": "node ./node_modules/.bin/electron-builder --linux"
   },
   "build": {
     "appId": "com.cedced19.freemobiledesktop",
     "productName": "Free Mobile Desktop",
     "mac": {
-      "category": "public.app-category.utilities"
+      "category": "public.app-category.utilities",
+      "icon": "favicon.png",
+      "target": [
+        {
+          "target": "dmg",
+          "arch": ["x64", "arm64"]
+        },
+        {
+          "target": "zip",
+          "arch": ["x64", "arm64"]
+        }
+      ]
+    },
+    "win": {
+      "icon": "app/favicon.ico"
+    },
+    "linux": {
+      "icon": "app/favicon.png"
     },
     "directories": {
       "output": "dist",

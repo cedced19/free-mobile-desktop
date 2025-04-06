@@ -17,8 +17,9 @@ function createWindow() {
       nodeIntegration: true,       // Allow require in renderer
       contextIsolation: false,     // Disable context isolation
       enableRemoteModule: true,    // Enable remote module
-      devTools: true
-    }
+      devTools: false 
+    },
+    icon: path.join(__dirname, 'favicon.png')
   });
 
   mainWindow.loadFile(path.join(__dirname, 'index.html'))

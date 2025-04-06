@@ -10,8 +10,8 @@ Une  application pour envoyer des SMS avec l'API de Free Mobile.
 
 1. [Télécharger](https://github.com/cedced19/free-mobile-desktop/releases/latest)
 2. Extraire les fichiers
-3. Exécuter `free-mobile.exe` (Windows) ou `free-mobile.app` (macOS)
-4. [Obtenir les identifiants](http://www.domotique-info.fr/2014/06/nouvelle-api-sms-chez-free/)
+3. Exécuter `free-mobile.exe` (Windows) ou installer `free-mobile.dmg` (macOS)
+4. [Obtenir les identifiants](https://aerogus.net/posts/api-sms-free-mobile/)
 
 ## Pour compiler
 
