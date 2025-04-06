@@ -1,7 +1,15 @@
 {
-  "name": "free-mobile",
-  "main": "index.html",
+  "name": "free-mobile-desktop",
   "version": "0.0.0",
+  "description": "A desktop application for Free Mobile services",
+  "main": "main.js",
+  "author": {
+    "name": "Cédric",
+    "email": "cedced19@gmail.com",
+    "url": "https://github.com/cedced19"
+  },
+  "license": "MIT",
+  "dependencies": {},
   "single-instance": true,
   "window": {
     "title": "Rename date",

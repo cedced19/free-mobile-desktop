@@ -8,7 +8,8 @@ var builder = require('node-webkit-builder'),
     uglify = require('gulp-uglify'),
     minifyCss = require('gulp-minify-css'),
     htmlmin = require('gulp-htmlmin'),
-    fs = require('fs');
+    fs = require('fs'),
+    electron = require('electron-installer-dmg');
 
 gulp.task('copy-fonts', function() {
     gulp.src('app/vendor/fonts/*.*')
@@ -103,6 +104,29 @@ gulp.task('dist-linux64', ['nw'], function () {
     return gulp.src('build/free-mobile/linux64/**/**')
         .pipe(zip('Linux64.zip'))
         .pipe(gulp.dest('dist/'));
+});
+
+gulp.task('dist-mac', ['build'], function () {
+    return gulp.src('')
+        .pipe(electron({
+            src: './build',
+            packageJson: packageJson,
+            release: './release',
+            cache: './cache',
+            version: 'latest',
+            packaging: true,
+            platforms: ['darwin-x64'],
+            platformResources: {
+                darwin: {
+                    CFBundleDisplayName: packageJson.name,
+                    CFBundleIdentifier: 'com.exemple.' + packageJson.name,
+                    CFBundleName: packageJson.name,
+                    CFBundleVersion: packageJson.version,
+                    icon: './icons/icon.icns'
+                }
+            }
+        }))
+        .pipe(gulp.dest(''));
 });
 
 gulp.task('default', ['dist-osx64', 'dist-osx32', 'dist-linux64', 'dist-linux32']);

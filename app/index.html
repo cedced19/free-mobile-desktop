@@ -9,6 +9,11 @@
         <link href="vendor/css/main.css" rel="stylesheet">
         <!-- endbuild -->
         <meta charset="utf-8">
+        <style>
+            body {
+                user-select: text;
+            }
+        </style>
     </head>
     <body ng-app="FreeMobile">
         <div class="container">
@@ -19,13 +24,19 @@
         <script src="vendor/js/bootstrap.min.js"></script>
         <script src="vendor/js/ripples.min.js"></script>
         <script src="vendor/js/material.min.js"></script>
-        <script src="vendor/js/right-click.js"></script>
-        <script src="vendor/js/fs.js"></script>
-        <script src="vendor/js/sms.js"></script>
+        <script src="vendor/js/fs-bridge.js"></script>
+        <script src="vendor/js/sms-bridge.js"></script>
         <script src="vendor/js/arrive.js"></script>
         <script src="vendor/js/angular.min.js"></script>
         <script src="vendor/js/angular-routes.min.js"></script>
         <script src="vendor/js/app.js"></script>
+        <script>
+            // Context menu handler using the electronAPI
+            document.addEventListener('contextmenu', (e) => {
+                e.preventDefault();
+                window.electronAPI.showContextMenu();
+            });
+        </script>
         <!-- endbuild -->
     </body>
 </html>

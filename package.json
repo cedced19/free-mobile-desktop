@@ -1,5 +1,5 @@
 {
-  "name": "free-mobile-desktop",
+  "name": "free-mobile-desktop-build",
   "version": "0.0.0",
   "homepage": "https://github.com/cedced19/free-mobile-desktop",
   "bugs": "https://github.com/cedced19/free-mobile-desktop/issues",
@@ -8,13 +8,15 @@
     "email": "cedced19@gmail.com",
     "url": "https://github.com/cedced19"
   },
+  "description": "Build environment for Free Mobile Desktop application",
   "repository": {
     "type": "git",
     "url": "git://github.com/cedced19/free-mobile-desktop.git"
   },
   "devDependencies": {
     "colors": "1.0.3",
-    "gulp": "^3.8.10",
+    "graceful-fs": "^4.2.11",
+    "gulp": "^5.0.0",
     "gulp-clean": "^0.3.1",
     "gulp-htmlmin": "^1.1.1",
     "gulp-if": "^1.2.5",
@@ -23,7 +25,9 @@
     "gulp-useref": "^1.1.2",
     "gulp-util": "^3.0.2",
     "gulp-zip": "^2.0.2",
-    "node-webkit-builder": "^1.0.11"
+    "node-webkit-builder": "^1.0.11",
+    "electron-builder": "^24.9.1",
+    "electron": "^35.1.4"
   },
   "engines": {
     "node": ">=0.10.0"
@@ -33,5 +37,22 @@
       "type": "MIT",
       "url": "http://cedced19.github.io/license/"
     }
-  ]
+  ],
+  "scripts": {
+    "start": "electron .",
+    "build": "node ./node_modules/.bin/electron-builder",
+    "build:mac": "node ./node_modules/.bin/electron-builder --mac"
+  },
+  "build": {
+    "appId": "com.cedced19.freemobiledesktop",
+    "productName": "Free Mobile Desktop",
+    "mac": {
+      "category": "public.app-category.utilities"
+    },
+    "directories": {
+      "output": "dist",
+      "app": "app"
+    }
+  },
+  "main": "app/main.js"
 }

@@ -30,6 +30,7 @@ angular.module('FreeMobile', ['ngRoute'])
 })
 .controller('FreeMobileSendCtrl', ['$scope', function ($scope) {
         $scope.items = filesystem.get();
+        console.log('$scope.items after get():', $scope.items);
         $scope.send = function (item) {
              angular.forEach($scope.items, function(value, key) {
                 if (value.name == item.name) {
@@ -39,10 +40,19 @@ angular.module('FreeMobile', ['ngRoute'])
         };
 }])
 .controller('FreeMobileAdminCtrl', ['$scope', function($scope) {
+    console.log('Controller initialized');
     $scope.items = filesystem.get();
+    console.log('$scope.items after get():', $scope.items);
     $scope.add = function () {
+        console.log('add called with $scope.new:', $scope.new);
+        if (!$scope.items) {
+            console.log('$scope.items is null, initializing to empty array');
+            $scope.items = [];
+        }
+        
         if ($scope.new.id != '' && $scope.new.tocken != '' && $scope.new.name != '') {
             $scope.items.push($scope.new);
+            console.log('Item pushed, new $scope.items:', $scope.items);
             filesystem.set($scope.items);
         }
     };
